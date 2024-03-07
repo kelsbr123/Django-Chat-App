@@ -1,18 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import Chat from '@/components/Chat'
-import UserAuth from "@/components/UserAuth.vue";
+import UserAuth from '@/components/UserAuth.vue'
 
 Vue.use(Router)
 
 const router = new Router({
   routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
     {
       path: '/chats',
       name: 'Chat',
@@ -28,9 +22,9 @@ const router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
-  if (sessionStorage.getItem('authToken') != null || to.path === '/auth') {
+  if (sessionStorage.getItem('authToken') !== null || to.path === '/auth') {
     next()
-  }else {
+  } else {
     next('/auth')
   }
 })
