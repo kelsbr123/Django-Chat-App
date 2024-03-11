@@ -100,9 +100,9 @@ export default {
       const credentials = {username: this.username, password: this.password}
 
       $.post('http://localhost:8000/auth/token/login/', credentials, (data) => {
-        localStorage.setItem('authToken', data.auth_token)
-        localStorage.setItem('username', this.username)
-        this.$router.push('/chats')
+        sessionStorage.setItem('authToken', data.auth_token)
+        sessionStorage.setItem('username', this.username)
+        this.$router.push('/chats/')
       })
         .fail((response) => {
           alert(response.responseText)

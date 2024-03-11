@@ -7,10 +7,9 @@
     <orderEntry type="jdk" jdkName="Python 3.10.12 WSL (Ubuntu): (/home/kels/.virtualenvs/Djano_Chat_App/bin/python) (2)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jquery-3.2.1" level="application" />
-    <orderEntry type="library" name="bootstrap" level="application" />
-    <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="popper.js" level="application" />
-    <orderEntry type="library" name="jquery-3.4.1.slim" level="application" />
     <orderEntry type="library" name="jquery-3.4.1" level="application" />
+    <orderEntry type="library" name="jquery-3.4.1.slim" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
   </component>
 </module>

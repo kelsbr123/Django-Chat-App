@@ -1,6 +1,8 @@
 """Views for the chat app."""
 
 from django.contrib.auth import get_user_model
+from rest_framework.authentication import TokenAuthentication
+
 from .models import (
     ChatSession, ChatSessionMember, ChatSessionMessage, deserialize_user
 )
@@ -14,7 +16,7 @@ class ChatSessionView(APIView):
     """Manage Chat sessions."""
 
     permission_classes = (permissions.IsAuthenticated,)
-
+    authentication_classes = (TokenAuthentication,)
     def post(self, request, *args, **kwargs):
         """create a new chat session."""
         user = request.user
@@ -60,6 +62,7 @@ class ChatSessionMessageView(APIView):
     """Create/Get Chat session messages."""
 
     permission_classes = (permissions.IsAuthenticated,)
+
 
     def get(self, request, *args, **kwargs):
         """return all messages in a chat session."""
