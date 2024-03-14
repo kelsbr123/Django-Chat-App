@@ -5,74 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e36a217-a9e4-4249-9783-2764b4669eb5" name="Changes" comment="Base functionality">
-      <change afterPath="$PROJECT_DIR$/frontend/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.postcssrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Chat.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/UserAuth.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/static/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/test/e2e/custom-assertions/elementCount.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/test/e2e/nightwatch.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/test/e2e/runner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/test/e2e/specs/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/test/unit/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/test/unit/jest.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/test/unit/setup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/test/unit/specs/HelloWorld.spec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Django_Chat_App.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Django_Chat_App.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatem/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatem/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/.babelrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/.eslintignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/.eslintrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/.postcssrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/build/build.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/build/check-versions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/build/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/build/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/build/vue-loader.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/build/webpack.base.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/build/webpack.dev.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/build/webpack.prod.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/config/dev.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/config/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/config/prod.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/config/test.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/src/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/src/components/Chat.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/src/components/UserAuth.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/src/router/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/static/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/test/e2e/custom-assertions/elementCount.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/test/e2e/nightwatch.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/test/e2e/runner.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/test/e2e/specs/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/test/unit/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/test/unit/jest.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/test/unit/setup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatire-frontend/test/unit/specs/HelloWorld.spec.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Chat.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Chat.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,36 +57,91 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\kelsb\\AppData\\Local\\Programs\\PyCharm Professional\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Django Server.Server.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "javascript.nodejs.core.library.configured.version": "12.22.9",
+    "javascript.nodejs.core.library.typings.version": "12.20.55",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/kels/Djano_Chat_App/chatem/settings.py",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "wsl://Ubuntu@/usr/bin/node",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "C:\\Users\\kelsb\\AppData\\Local\\Programs\\PyCharm Professional 2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;vue.recent.templates&quot;: [
-      &quot;Vue Composition API Component&quot;
+  "keyToStringList": {
+    "vue.recent.templates": [
+      "Vue Composition API Component"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="\\wsl.localhost\Ubuntu\home\kels\Djano_Chat_App" />
       <recent name="\\wsl.localhost\Ubuntu\home\kels\Djano_Chat_App\chatem\chatem" />
     </key>
   </component>
+  <component name="RunManager" selected="Compound.Run">
+    <configuration name="Run" type="CompoundRunConfigurationType">
+      <toRun name="Server" type="Python.DjangoServer" />
+      <toRun name="dev" type="js.build_tools.npm" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Server" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Django_Chat_App" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="chatem.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.10.12 WSL (Ubuntu): (/home/kels/.virtualenvs/Djano_Chat_App/bin/python)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Compound.Run" />
+      <item itemvalue="Django Server.Server" />
+      <item itemvalue="npm.dev" />
+    </list>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+        <option value="bundled-python-sdk-d68999036c7f-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.14475.56" />
       </set>
     </attachedChunks>
   </component>
@@ -169,7 +160,10 @@
       <workItem from="1709768292433" duration="12026000" />
       <workItem from="1709847091028" duration="4959000" />
       <workItem from="1709859055418" duration="1188000" />
-      <workItem from="1710136818282" duration="3340000" />
+      <workItem from="1710136818282" duration="4562000" />
+      <workItem from="1710263657590" duration="511000" />
+      <workItem from="1710379236829" duration="812000" />
+      <workItem from="1710397543001" duration="2751000" />
     </task>
     <task id="LOCAL-00001" summary="Base functionality">
       <option name="closed" value="true" />
@@ -195,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709843408616</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Base functionality">
+      <option name="closed" value="true" />
+      <created>1710141475872</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710141475872</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
