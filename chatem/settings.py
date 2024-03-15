@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'django_extensions',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -41,7 +42,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     'djoser',
-    'chat'
+    'chat',
+    'notifications',
 ]
 
 MIDDLEWARE = [
@@ -113,6 +115,14 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAdminUser'
     ),
+}
+
+# Celery settings
+CELERY_TASK_ALWAYS_EAGER = False
+
+# notifications settings
+NOTIFICATIONS_CHANNELS = {
+   'websocket': 'chat.channels.BroadCastWebSocketChannel'
 }
 
 # Internationalization

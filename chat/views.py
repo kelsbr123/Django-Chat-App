@@ -10,6 +10,7 @@ from .models import (
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import permissions
+from notifications.utils import notify
 
 
 class ChatSessionView(APIView):
@@ -17,6 +18,7 @@ class ChatSessionView(APIView):
 
     permission_classes = (permissions.IsAuthenticated,)
     authentication_classes = (TokenAuthentication,)
+
     def post(self, request, *args, **kwargs):
         """create a new chat session."""
         user = request.user
@@ -41,28 +43,27 @@ class ChatSessionView(APIView):
 
         if owner != user:  # Only allow non owners join the room
             chat_session.members.get_or_create(
-            user = user, chat_session = chat_session
-        )
+                user=user, chat_session=chat_session
+            )
 
         owner = deserialize_user(owner)
         members = [
-        deserialize_user(chat_session.user)
-        for chat_session in chat_session.members.all()
+            deserialize_user(chat_session.user)
+            for chat_session in chat_session.members.all()
 
-    ]
+        ]
         members.insert(0, owner)  # Make the owner the first member
         return Response({
-        'status': 'SUCCESS', 'members': members,
-        'message': '%s joined the chat' % user.username,
-        'user': deserialize_user(user)
-    })
+            'status': 'SUCCESS', 'members': members,
+            'message': '%s joined the chat' % user.username,
+            'user': deserialize_user(user)
+        })
 
 
 class ChatSessionMessageView(APIView):
     """Create/Get Chat session messages."""
 
     permission_classes = (permissions.IsAuthenticated,)
-
 
     def get(self, request, *args, **kwargs):
         """return all messages in a chat session."""
@@ -85,8 +86,22 @@ class ChatSessionMessageView(APIView):
         user = request.user
         chat_session = ChatSession.objects.get(uri=uri)
 
-        ChatSessionMessage.objects.create(
+        chat_session_message = ChatSessionMessage.objects.create(
             user=user, chat_session=chat_session, message=message
+        )
+
+        notification_kwargs = {
+            'source': user,
+            'source_display_name': user.get_full_name(),
+            'category': 'chat',
+            'action': 'Sent',
+            'short_description': 'You got a new message', 'silent': True,
+            'extra_data': {'uri': chat_session.uri}
+        }
+        notify(
+            countdown=0,
+            channels=['websocket'],
+            **notification_kwargs
         )
 
         return Response({
