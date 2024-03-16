@@ -10,8 +10,7 @@ from .models import (
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import permissions
-from notifications.utils import notify
-
+from notifications.signals import notify
 
 class ChatSessionView(APIView):
     """Manage Chat sessions."""
@@ -90,18 +89,16 @@ class ChatSessionMessageView(APIView):
             user=user, chat_session=chat_session, message=message
         )
 
-        notification_kwargs = {
+        notif_args = {
             'source': user,
             'source_display_name': user.get_full_name(),
-            'category': 'chat',
-            'action': 'Sent',
-            'short_description': 'You got a new message', 'silent': True,
+            'category': 'chat', 'action': 'Sent',
+            'obj': chat_session_message.id,
+            'short_description': 'You a new message', 'silent': True,
             'extra_data': {'uri': chat_session.uri}
         }
-        notify(
-            countdown=0,
-            channels=['websocket'],
-            **notification_kwargs
+        notify.send(
+            sender=self.__class__, **notif_args, channels=['websocket']
         )
 
         return Response({
