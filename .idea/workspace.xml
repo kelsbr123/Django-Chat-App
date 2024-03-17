@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e36a217-a9e4-4249-9783-2764b4669eb5" name="Changes" comment="Base functionality">
+      <change beforePath="$PROJECT_DIR$/.idea/Django_Chat_App.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Django_Chat_App.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Chat.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Chat.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +78,7 @@
     "git-widget-placeholder": "master",
     "javascript.nodejs.core.library.configured.version": "12.22.9",
     "javascript.nodejs.core.library.typings.version": "12.20.55",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/kels/Djano_Chat_App/chatem/settings.py",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/kels/Djano_Chat_App/frontend/static",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,6 +97,11 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu\home\kels\Djano_Chat_App\frontend\static" />
+      <recent name="\\wsl.localhost\Ubuntu\home\kels\Djano_Chat_App\frontend\src\assets" />
+      <recent name="C:\Users\kelsb\AppData\Local\JetBrains\PyCharm2023.3\remote_sources\2012094244\-953239351" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="\\wsl.localhost\Ubuntu\home\kels\Djano_Chat_App\chat" />
       <recent name="\\wsl.localhost\Ubuntu\home\kels\Djano_Chat_App\chatem" />
@@ -112,6 +120,9 @@
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.3/remote_sources/2012094244/-953239351/notifications/providers" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -200,7 +211,9 @@
       <workItem from="1710136818282" duration="4562000" />
       <workItem from="1710263657590" duration="511000" />
       <workItem from="1710379236829" duration="812000" />
-      <workItem from="1710397543001" duration="29421000" />
+      <workItem from="1710397543001" duration="36426000" />
+      <workItem from="1710658602305" duration="3000" />
+      <workItem from="1710658632371" duration="10290000" />
     </task>
     <task id="LOCAL-00001" summary="Base functionality">
       <option name="closed" value="true" />
@@ -250,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710484604310</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Base functionality">
+      <option name="closed" value="true" />
+      <created>1710574409486</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710574409486</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +306,7 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.3/remote_sources/1771103643/-953239351/notifications/utils.py</url>
-          <line>24</line>
+          <line>21</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -295,7 +316,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.3/remote_sources/1771103643/-953239351/notifications/utils.py</url>
-          <line>50</line>
+          <line>34</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>

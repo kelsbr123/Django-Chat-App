@@ -1,9 +1,10 @@
 <template>
+
   <div class='container'>
     <div class='row'>
       <div class='col-sm-6 offset-3'>
 
-        <div v-if='sessionStarted' id='chat-container' class='card'>
+        <div v-if="!loading && sessionStarted" id="chat-container" class="card">
           <div class='card-header text-white text-center font-weight-bold subtle-blue-gradient'>
             Share the page URL to invite new friends
           </div>
@@ -52,7 +53,7 @@
           </div>
         </div>
 
-        <div v-else>
+        <div v-else-if="!loading && !sessionStarted">
           <h3 class='text-center'>Welcome !</h3>
           <br/>
           <p class='text-center'>
@@ -61,6 +62,13 @@
           </p>
           <br/>
           <button @click='startChatSession' class='btn btn-primary btn-lg btn-block'>Start Chatting</button>
+        </div>
+
+        <div v-else>
+          <div class="loading">
+            <img src="../assets/disqus.svg"  alt="Loading"/>
+            <h4>Loading...</h4>
+          </div>
         </div>
       </div>
     </div>
@@ -74,9 +82,11 @@ const $ = window.jQuery
 export default {
   data () {
     return {
+      loading: true,
       sessionStarted: false,
       messages: [],
-      message: ''
+      message: '',
+      notification: new Audio('../../static/plucky.ogg')
     }
   },
 
@@ -94,7 +104,16 @@ export default {
       this.joinChatSession()
     }
 
-    setInterval(this.fetchChatSessionHistory, 3000)
+    this.connectToWebSocket()
+
+    setTimeout(() => { this.loading = false }, 2000)
+  },
+  updated () {
+    // Scroll to bottom of Chat window
+    const chatBody = this.$refs.chatBody
+    if (chatBody) {
+      chatBody.scrollTop = chatBody.scrollHeight
+    }
   },
 
   methods: {
@@ -113,7 +132,6 @@ export default {
       const data = {message: this.message}
 
       $.post(`http://localhost:8000/api/chats/${this.$route.params.uri}/messages/`, data, (data) => {
-        this.messages.push(data)
         this.message = '' // clear the message after sending
       })
         .fail((response) => {
@@ -143,9 +161,40 @@ export default {
     fetchChatSessionHistory () {
       $.get(`http://127.0.0.1:8000/api/chats/${this.$route.params.uri}/messages/`, (data) => {
         this.messages = data.messages
+        setTimeout(() => { this.loading = false }, 2000)
       })
-    }
+    },
 
+    connectToWebSocket () {
+      const websocket = new WebSocket(`ws://localhost:8081/${this.$route.params.uri}`)
+      websocket.onopen = this.onOpen
+      websocket.onclose = this.onClose
+      websocket.onmessage = this.onMessage
+      websocket.onerror = this.onError
+    },
+
+    onOpen (event) {
+      console.log('Connection opened.', event.data)
+    },
+
+    onClose (event) {
+      console.log('Connection closed.', event.data)
+
+      // Try and Reconnect after five seconds
+      setTimeout(this.connectToWebSocket, 5000)
+    },
+
+    onMessage (event) {
+      const message = JSON.parse(event.data)
+      this.messages.push(message)
+      if (!document.hasFocus()) {
+        this.notification.play()
+      }
+    },
+
+    onError (event) {
+      alert('An error occured:', event.data)
+    }
   }
 }
 </script>

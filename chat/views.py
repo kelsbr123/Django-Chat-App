@@ -95,7 +95,11 @@ class ChatSessionMessageView(APIView):
             'category': 'chat', 'action': 'Sent',
             'obj': chat_session_message.id,
             'short_description': 'You a new message', 'silent': True,
-            'extra_data': {'uri': chat_session.uri}
+            'extra_data': {'uri': chat_session.uri,
+                           'message': message,
+                           'user': {
+                               'username': user.username
+                           }}
         }
         notify.send(
             sender=self.__class__, **notif_args, channels=['websocket']
